@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #33CC99;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("https://4kwallpapers.com/images/walls/thumbs_2t/10256.jpg") no-repeat ;
+    background-size: 1279px 640px;}
+
+.container {
+    background-color: #fff;
+    max-width: 400px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 90px;
+}
+
+h2 {
+    text-align: center;
+    color: #33CC99;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px;
+    background-color: #33CC99;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #009966;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+}
+
+.slogan {
+    text-align: center;
+    font-style: italic;
+    color: #009966;
+}
+
+/* Styling for waste collection photos */
+.waste-collection-photos {
+    text-align: center;
+}
+
+.waste-collection-photo {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}

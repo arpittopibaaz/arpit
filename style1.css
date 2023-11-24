@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ body {
+          font-family: Arial, sans-serif;
+          background-color: #33CC99;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background: url("https://4kwallpapers.com/images/wallpapers/grid-green-4480x2520-10269.jpg") repeat ;
+          background-size: 1279px 640px;}
+  
+
+  header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav {
+    background:#d4db0d ;
+    color: #fff;
+    text-align: center;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav li {
+    display: inline-grid;
+    margin: 0 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #16434d;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .dashboard-item {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+
+  .dashboard-item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 20px;
+  }
+
+  .graph-container {
+    flex: 1; /* Expand to fill available space */
+  }

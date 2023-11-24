@@ -1,0 +1,92 @@
+z<!DOCTYPE html>
+<html>
+<head>
+    <title>Waste Collection Portal</title>
+    <link rel="icon" type="image/x-icon" href="https://images-platform.99static.com//cgllINsOvSk0NS6S49LszJhQxaU=/167x131:1127x1091/fit-in/590x590/99designs-contests-attachments/96/96813/attachment_96813164">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div class="container">
+            <img src="https://images-platform.99static.com//cgllINsOvSk0NS6S49LszJhQxaU=/167x131:1127x1091/fit-in/590x590/99designs-contests-attachments/96/96813/attachment_96813164" class="logo">
+            <h2>Login</h2>
+            <form action="2ndpage.html" method="post">
+                <label for="username">Email:</label>
+                <input type="text" id="l_username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="l_password" name ="password" required>
+
+                <button type="button" onclick="login()">Login</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Sign Up</h2>
+            <p class="slogan">Join the Green Movement</p>
+            <form action="" method="post">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="newEmail">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="newPassword">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" onclick="register()">Sign Up</button>
+            </form>
+        </div>
+
+    
+</body>
+<script>
+    // Registration function
+    function register() {
+        var newUsername = document.getElementById("username").value;
+        var newEmail = document.getElementById("email").value;
+        var newPassword = document.getElementById("password").value;
+
+        // Check if the email is already registered
+        var users = JSON.parse(localStorage.getItem("users")) || [];
+        var existingUser = users.find(function (user) {
+            return user.email === newEmail;
+        });
+
+        if (existingUser) {
+            alert("Email already registered. Please use a different email.");
+            return;
+        }
+
+        // Add the new user to the local storage
+        var newUser = {
+            username: newUsername,
+            email: newEmail,
+            password: newPassword
+        };
+
+        users.push(newUser);
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Registration successful. You can now log in.");
+    }
+
+    // Login function
+    function login() {
+        var username = document.getElementById("l_username").value;
+        var password = document.getElementById("l_password").value;
+        var users = JSON.parse(localStorage.getItem("users")) || [];
+
+        var user = users.find(function (user) {
+            return user.email === username && user.password === password;
+        });
+
+        if (user) {
+            alert("Login successful. Redirecting to Output Page.");
+            window.location.href = "2ndpage.html";
+        } else {
+            alert("Invalid email or password.");
+        }
+    }
+</script>
+</html>
+
