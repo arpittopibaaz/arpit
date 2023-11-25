@@ -1,4 +1,4 @@
-z<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Waste Collection Portal</title>
@@ -54,7 +54,6 @@ z<!DOCTYPE html>
 
         if (existingUser) {
             alert("Email already registered. Please use a different email.");
-            return;
         }
 
         // Add the new user to the local storage
@@ -68,6 +67,7 @@ z<!DOCTYPE html>
         localStorage.setItem("users", JSON.stringify(users));
 
         alert("Registration successful. You can now log in.");
+        return;
     }
 
     // Login function
